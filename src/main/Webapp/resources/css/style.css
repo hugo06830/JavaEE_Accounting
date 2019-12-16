@@ -1,0 +1,25 @@
+body{
+    background-color:lightgrey;
+
+}
+
+.login-form-parent{
+
+}
+
+.login-form-div{
+
+    display: flex;
+    border: solid 1px grey;
+    background-color: white;
+    border-radius: 15px;
+}
+
+
+.login-form{
+    margin: auto;
+}
+
+input{
+    background-color: lightgrey;
+}
