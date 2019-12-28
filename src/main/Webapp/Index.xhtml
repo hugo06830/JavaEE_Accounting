@@ -12,24 +12,27 @@
     </h:head>
 
 
-    <h:body>
-        <div class = "login-form-div-parent">
-        <div class = "login-form-div">
 
-            <h:form class="login-form">
-                <h:inputText p:placeholder="Username" id="username-input"></h:inputText>
+
+
+    <h:body>
+
+        <h1 style="text-align: center">University of Luxembourg accounting system</h1>
+        <div class="login-form-div">
+        <div class="login-form">
+
+            <h:form>
+                <img src="./resources/img/unilulogo.png" alt="uni lu logo"/>
                 <br/>
-                <h:inputText  p:placeholder= "Pasword" id = "password-input" ></h:inputText>
+                <h:inputText required="true" p:placeholder="Username" value="#{login.username}"></h:inputText>
                 <br/>
+                <h:inputText  required="true"  style="margin-bottom: 28px" p:placeholder="Password" value="#{login.password}"></h:inputText>
+                <br/>
+                <h:commandButton styleClass="Command" action="#{login.login}" value="Login"></h:commandButton>
             </h:form>
 
-
         </div>
         </div>
-
-
-
-
 
 
 

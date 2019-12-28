@@ -1,0 +1,38 @@
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+              http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+              version="2.2"
+>
+
+    <navigation-rule>
+        <from-view-id>/Index.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{login.login}</from-action>
+            <from-outcome>Admin account</from-outcome>
+            <to-view-id>/Index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{login.login}</from-action>
+            <from-outcome>Accounting account</from-outcome>
+            <to-view-id>/Index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{login.login}</from-action>
+            <from-outcome>Normal account</from-outcome>
+            <to-view-id>/Index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{login.login}</from-action>
+            <from-outcome>No account</from-outcome>
+            <to-view-id>/Index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{login.login}</from-action>
+            <from-outcome>Unexpected error</from-outcome>
+            <to-view-id>/Index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+</faces-config>
