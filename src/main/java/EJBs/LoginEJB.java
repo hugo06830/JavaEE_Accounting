@@ -1,12 +1,8 @@
 package EJBs;
-
 import JPA.Staff;
-
-import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
-import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 @Stateless
@@ -23,7 +19,6 @@ public class LoginEJB implements Login {
             if(!staff.isEnabled()){
                 return "Disabled account";
             }
-
             switch(staff.getCategory()){
                 case admin: return "Admin account";
                 case normal: return "Normal account";

@@ -6,25 +6,18 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-   <h:body styleClass="whitebody">
+    <h:body>
        <ui:composition>
-           <h1 style="text-align: center;">Logged as #{login.username} (#{login.type})</h1>
+           <h1 style="text-align: center;">Logged in as #{login.username} (#{login.type})</h1>
        <div class="loggout">
-       <h:commandButton styleClass="Commandloggout"  value="Loggout" ></h:commandButton>
+       <h:commandButton styleClass="Commandloggout"  value="Loggout" action="#{login.logout}"></h:commandButton>
 
        </div>
            <div class="sidenav">
-               <a href="#">Welcome</a>
-               <a href="#">Contract</a>
+               <a href="${pageContext.request.contextPath}Indexnormal.xhtml">Welcome</a>
+               <a href="${pageContext.request.contextPath}ContractIndex.xhtml">Contract</a>
            </div>
-           <pre>Welcome to the Unniversity of luxembourg accounting management web application.
-This application was made by Hugo Kolander in order to use the different functionnalities
-just click on the navigate using the sidebar.
-           </pre>
-
-
-
        </ui:composition>
-   </h:body>
+    </h:body>
 </f:view>
 </html>

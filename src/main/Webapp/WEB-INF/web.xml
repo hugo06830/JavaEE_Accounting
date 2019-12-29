@@ -23,6 +23,7 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>Index.xhtml</welcome-file>
+
     </welcome-file-list>
 
 </web-app>

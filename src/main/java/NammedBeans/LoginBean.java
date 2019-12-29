@@ -54,14 +54,23 @@ public class LoginBean implements Serializable {
 
     public String login(){
         type = logger.login(Username,Password,em);
+
         clear();
         return  type;
     }
+
+    public String logout(){
+        clear();
+        return  "Successfully logged out";
+    }
+
 
     public void clear(){
         Username = null;
         Password = null;
     }
+
+
 
 
 

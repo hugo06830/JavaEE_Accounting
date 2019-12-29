@@ -5,19 +5,32 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-
 <h:head>
-    <h:outputStylesheet library="css" name="style2.css"/>
+    <h:outputStylesheet library="css" name="style2.css"></h:outputStylesheet>
 </h:head>
 <f:view>
+    <h:body>
 
         <ui:include src="GeneralTemplate.xhtml"></ui:include>
-    <pre>Welcome to the Unniversity of luxembourg accounting management web application.
-This application was made by Hugo Kolander in order to use the different functionnalities
-just click on the navigate using the sidebar.
-    </pre>
+    <div class="contractpreview">
+        <h:commandButton  styleClass="command" value="Add"></h:commandButton>
+        <h:commandButton styleClass="command" value="Refresh"></h:commandButton>
+        <ul>
+            <li style=""><div class="contractcontainer">
+
+            </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+    </h:body>
+
 
 
 
 </f:view>
+
+
 </html>
