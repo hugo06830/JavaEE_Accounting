@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class LoginBean implements Serializable {
     private String Username;
     private String Password;
+    private String type;
 
     @PersistenceContext(unitName = "accounting")
     private EntityManager em;
@@ -39,20 +40,27 @@ public class LoginBean implements Serializable {
         Password = password;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public  LoginBean(){
 
     }
 
     public String login(){
-        String usr = Username;
-        String pwd = Password;
+        type = logger.login(Username,Password,em);
         clear();
-        return logger.login(usr,pwd,em);
+        return  type;
     }
 
     public void clear(){
-        Username = "";
-        Password = "";
+        Username = null;
+        Password = null;
     }
 
 

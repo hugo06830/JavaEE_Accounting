@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+   <h:body styleClass="whitebody">
+       <ui:composition>
+           <h1 style="text-align: center;">Logged as #{login.username} (#{login.type})</h1>
+       <div class="loggout">
+       <h:commandButton styleClass="Commandloggout"  value="Loggout" ></h:commandButton>
+
+       </div>
+           <div class="sidenav">
+               <a href="#">Welcome</a>
+               <a href="#">Contract</a>
+           </div>
+           <pre>Welcome to the Unniversity of luxembourg accounting management web application.
+This application was made by Hugo Kolander in order to use the different functionnalities
+just click on the navigate using the sidebar.
+           </pre>
+
+
+
+       </ui:composition>
+   </h:body>
+</f:view>
+</html>

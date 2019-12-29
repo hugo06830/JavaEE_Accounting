@@ -20,7 +20,7 @@
         <navigation-case>
             <from-action>#{login.login}</from-action>
             <from-outcome>Normal account</from-outcome>
-            <to-view-id>/Index.xhtml</to-view-id>
+            <to-view-id>/Indexnormal.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
             <from-action>#{login.login}</from-action>
