@@ -1,20 +1,21 @@
 body{
     background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-
 }
-
 
 h1{
-    padding-bottom: 70px;
+  font-family: "lato",sans-serif;
 }
 
+.loggout{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 70px;
+}
 
 .Commandloggout{
     height: 23px;
     width: 155px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    position: relative;
     background: #111;
     border-radius: 4px;
     color: white;
@@ -64,10 +65,11 @@ pre,h1{
 }
 
 .contractpreview{
+    position: relative;
     background-color: white;
     margin-left: 160px;
     margin-right: 10px;
-    width: 100%;
+    width: 1050px;
     height: 500px;
     overflow: auto;
 }
@@ -81,15 +83,61 @@ pre,h1{
     padding-bottom: 20px;
 }
 
-.contractcontainer{
+.contractcontainers{
+    position: relative;
     border: 1px solid black;
     background-color:  #818181;
     height: 40px;
-    width: 100%;
+    width: 1000px;
+    border-radius: 5px;
 }
 
 ul{
     list-style: none;
     padding: 0;
 
+}
+
+img{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    padding-right: 5px;
+    line-height: 30px;
+    margin-top: 10px;
+
+}
+
+.logout{
+    text-align: center;
+}
+
+.txt{
+color: #8DC26F;
+}
+
+.lineul{
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.lineul li{
+    display: inline-block;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+
+.small{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
 }

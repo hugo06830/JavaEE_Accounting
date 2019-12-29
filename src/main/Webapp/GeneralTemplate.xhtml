@@ -8,14 +8,15 @@
 <f:view>
     <h:body>
        <ui:composition>
+           <div class="loggout">
            <h1 style="text-align: center;">Logged in as #{login.username} (#{login.type})</h1>
-       <div class="loggout">
-       <h:commandButton styleClass="Commandloggout"  value="Loggout" action="#{login.logout}"></h:commandButton>
 
+       <h:commandButton styleClass="Commandloggout"  value="Loggout" action="#{login.logout}"></h:commandButton>
        </div>
            <div class="sidenav">
                <a href="${pageContext.request.contextPath}Indexnormal.xhtml">Welcome</a>
                <a href="${pageContext.request.contextPath}ContractIndex.xhtml">Contract</a>
+               <a href="${pageContext.request.contextPath}StaffIndex.xhtml">Staff</a>
            </div>
        </ui:composition>
     </h:body>

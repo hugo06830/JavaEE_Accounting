@@ -12,19 +12,59 @@
     <h:body>
 
         <ui:include src="GeneralTemplate.xhtml"></ui:include>
-    <div class="contractpreview">
-        <h:commandButton  styleClass="command" value="Add"></h:commandButton>
-        <h:commandButton styleClass="command" value="Refresh"></h:commandButton>
-        <ul>
-            <li style=""><div class="contractcontainer">
 
+    <div class="contractpreview">
+        <h:commandButton  styleClass="command" style="margin-bottom: 4px"  value="Add" ></h:commandButton>
+        <h:commandButton styleClass="command"  value="Refresh"></h:commandButton>
+        <h:commandButton styleClass="command"  value="Delete"></h:commandButton>
+        <h:commandButton styleClass="command"  value="Filter by"></h:commandButton>
+
+        <ul>
+
+            <li><div class="contractcontainers">
+                <div class="small">
+            <img src="./resources/img/Contract.png" alt="Contract logo"/>
+                <ul class="lineul"><li>
+                    <h:outputText styleClass="" value="ID: "></h:outputText>
+                </li>
+                    <li>
+                        <h:outputText styleClass="txt" value="1"></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="" value="Title: "></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="txt" value="My title which"></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="" value="StartDate: "></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="txt" value="01/01/2019"></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="" value="End Date: "></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="txt" value="02/02/2019"></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="" value="State:"></h:outputText>
+                    </li>
+                    <li>
+                        <h:outputText styleClass="txt" value="runing"></h:outputText>
+                    </li>
+                <li>
+                    <h:commandButton   id="delete" styleClass="command" value = "Delete"></h:commandButton>
+                </li></ul>
+                </div>
             </div>
             </li>
 
         </ul>
 
     </div>
-
+        <h:outputScript  library="js" name="reactiveform.js"></h:outputScript>
     </h:body>
 
 
