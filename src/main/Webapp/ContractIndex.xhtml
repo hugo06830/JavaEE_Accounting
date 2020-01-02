@@ -14,11 +14,11 @@
         <ui:include src="GeneralTemplate.xhtml"></ui:include>
 
     <div class="contractpreview">
-        <h:commandButton  styleClass="command" style="margin-bottom: 4px"  value="Add" ></h:commandButton>
+        <h:form>
+        <h:commandButton  styleClass="command" style="margin-bottom: 4px"  value="Add" action="/AddContract.xhtml" ></h:commandButton>
         <h:commandButton styleClass="command"  value="Refresh"></h:commandButton>
-        <h:commandButton styleClass="command"  value="Delete"></h:commandButton>
         <h:commandButton styleClass="command"  value="Filter by"></h:commandButton>
-
+        </h:form>
         <ul>
 
             <li><div class="contractcontainers">
@@ -55,7 +55,7 @@
                         <h:outputText styleClass="txt" value="runing"></h:outputText>
                     </li>
                 <li>
-                    <h:commandButton   id="delete" styleClass="command" value = "Delete"></h:commandButton>
+                    <h:commandButton   id="delete" styleClass="command" value = "Delete" action="#{contract.deleteContract}"></h:commandButton>
                 </li></ul>
                 </div>
             </div>

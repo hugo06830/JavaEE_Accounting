@@ -9,15 +9,16 @@ import java.util.List;
 @Table(name = "Account")
 public class Staff {
 
-    @Id @GeneratedValue(strategy= GenerationType.AUTO)
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int Acc_id;
     private String Username;
     private  String Password;
     @Enumerated(EnumType.STRING)
     private Category Category;
-    private boolean enabled;
+    private boolean enabled = true;
 
     @OneToMany
+    @JoinColumn(name = "ID")
     private List<Contract> contractList = new ArrayList<>();
 
 

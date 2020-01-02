@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<f:view>
+    <h:head>
+        <h:outputStylesheet library="css" name="style.css"/>
+
+    </h:head>
+   <h:body>
+
+
+       <div class="login-form-div">
+       <div class="login-form" style="height: 480px">
+
+       <h:form>
+           <h1>Add a contract</h1>
+           <img src="./resources/img/Contract.png" alt="uni lu logo"/>
+           <br/>
+           <h:inputText required="true" p:placeholder="Title" value="#{contract.c.title}"></h:inputText>
+           <br/>
+           <h:inputTextarea styleClass="textarea" type="text" required="true" p:placeholder="Description" value="#{contract.c.description}" ></h:inputTextarea>
+           <br/>
+           <h:inputText  type="number" required="true" p:placeholder="Total Cost" value="#{contract.c.total_cost}" ></h:inputText>
+           <br/>
+           Starting date:
+           <h:inputText p:type="date" name="starting date" value="#{contract.c.start_date}">
+               <f:convertDateTime pattern="yyyy-MM-dd"></f:convertDateTime>
+           </h:inputText>
+           <br/>
+           Ending date:
+           <h:inputText p:type="date" name="ending date" value="#{contract.c.end_date}">
+               <f:convertDateTime pattern="yyyy-MM-dd"></f:convertDateTime>
+           </h:inputText>
+
+
+           <br/>
+           Provider:
+           <h:selectOneMenu value="#{contract.c.providerId}">
+           <f:selectItems value="#{account.allAcc}"  var="o" itemLabel="#{o.username}" itemValue="#{o.acc_id}" />
+           </h:selectOneMenu>
+           <br/>
+           <h:commandButton styleClass="Command" value="Confirm" action="#{contract.addContract}"></h:commandButton>
+       </h:form>
+       </div>
+       </div>
+
+
+
+   </h:body>
+</f:view>
+</html>

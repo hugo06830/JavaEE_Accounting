@@ -90,6 +90,7 @@ pre,h1{
     height: 40px;
     width: 1000px;
     border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 ul{
@@ -136,8 +137,8 @@ color: #8DC26F;
 
 .small{
     position: absolute;
-    margin: 0;
     top: 50%;
+    margin: 0 0 5px;
     -ms-transform: translateY(-40%);
     transform: translateY(-40%);
 }
